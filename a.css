@@ -1,0 +1,41 @@
+.nav {
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+.navbar {
+    overflow: hidden;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 10;
+    margin-top: 20px;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #207567;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+}
+.cd-header{
+    background: linear-gradient(45deg, #B4D6C1, #6BAF92, #4E9C81, #358873);
+
+}

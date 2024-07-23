@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+			    background-image: linear-gradient(45deg,#B4D6C1,#6BAF92,#358873,#207567);
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .about-section {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 50px;
+        }
+        .about-section h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .about-section h6 {
+            color: #e74c3c;
+            margin-bottom: 20px;
+        }
+        .about-section p {
+            color: #777;
+            line-height: 1.6;
+        }
+        .about-list .media {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .about-list .media label {
+            flex: 0 0 120px;
+            color: #333;
+            font-weight: bold;
+        }
+        .about-list .media p {
+            margin: 0;
+            color: #777;
+        }
+        .about-avatar img {
+            max-width: 100%;
+            border-radius: 50%;
+        }
+        .counter {
+			font-size: 24px;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        .counter .count-data {
+            text-align: center;
+            flex: 1;
+        }
+        .counter .count-data h6 {
+            margin: 0;
+            color: #333;
+        }
+        .counter .count-data p {
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <section class="about-section container">
+        <div class="row">
+            <div class="col-lg-6 about-text">
+                <h3>User profile</h3>
+				<div class="col-lg-6 about-avatar">
+					<img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Avatar">
+				</div>
+                <div class="row about-list">
+                    <div class="col-md-6">
+						<div class="media">
+                            <label>Name</label>
+                            <p></p>
+                        </div>
+                        <div class="media">
+                            <label>Birthday</label>
+                            <p></p>
+                        </div>
+                        <div class="media">
+                            <label>Age</label>
+                            <p></p>
+                        </div>
+                        <div class="media">
+                            <label>Residence</label>
+                            <p>India</p>
+                        </div>
+                        <div class="media">
+                            <label>Address</label>
+                            <p>Chandigarh, India</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="media">
+                            <label>E-mail</label>
+                            <p>info@domain.com</p>
+                        </div>
+                        <div class="media">
+                            <label>Phone</label>
+                            <p>820-885-3321</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="counter">
+            <div class="count-data">
+				<style>
+					.count {
+						font-size: 36px;
+					}
+				</style>
+                <h6 class="count">500</h6>
+                <p>Credits</p>
+        </div>
+    </section>
+</body>
+</html>

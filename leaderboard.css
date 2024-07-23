@@ -1,0 +1,259 @@
+html,
+body {
+   height: 3250px;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(45deg, #B4D6C1, #6BAF92, #4E9C81, #358873);
+    font-weight: 100;
+}
+.nav {
+    margin-top: 10px;
+}
+
+
+
+
+
+
+.table {
+    flex: 1;
+    /* This makes the table section take up the remaining space */
+    margin-top: 10px;
+}
+
+.container {
+    max-width: 1050px;
+    width: 90%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 58%;
+    transform: translate(-50%, -50%);
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    background-color: white;
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 10;
+}
+.navbar nav {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.navbar img {
+    width: 70px;
+    height: 70px;
+}
+.navbar a {
+    float: left;
+    display: block;
+    color: #207567;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+}
+
+main {
+    padding-top: 80px;
+}
+
+.container {
+
+    top: 50%;
+    left: 58%;
+    transform: translate(-50%, -50%);
+}
+
+table {
+    width: 800px;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+th {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-style: bold;
+    font-size: 25px;
+}
+
+td {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-style: bold;
+    font-size: 25px;
+}
+
+th {
+    text-align: left;
+}
+
+thead {
+    th {
+        background-color: #207567;
+    }
+}
+
+tbody {
+    tr {
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+    }
+
+    td {
+        position: relative;
+
+        &:hover {
+            &:before {
+                content: "";
+                
+                left: 0;
+                right: 0;
+                top: -9999px;
+                bottom: -9999px;
+                background-color: rgba(255, 255, 255, 0.2);
+                z-index: -1;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    color: #207567;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1050px;
+    width: 90%;
+}
+
+
+.image img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.content h2 {
+    margin-bottom: 10px;
+}
+
+.content p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+
+.card{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 50px;
+   
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    text-align: center;
+}
+.box_cat{
+    background-color: #fbfffb; 
+    height:180px;
+    width:200px;
+    padding:10px 10px 10px 10px;
+    padding-left:70px;
+    padding-top:30px;
+    margin:20px 30px 20px 30px;
+    border-radius: 20px;
+    float:left;
+    box-shadow: 50px 50px 50px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.5s; 
+    
+   
+}
+.box_cat span {
+    font-size: 100px;
+    text-align: center;
+    display: block;
+}
+.card div:hover {
+    background-color: #A5D6A7; 
+}
+
+.footer {
+    margin-top: 20px;
+    background-color: #207567;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.box_cat{
+    display: flex; 
+    flex-direction: column; 
+    margin: 10px;
+}
+.box_cat img{
+    width: 150px; 
+    height:150px;
+    margin:5px 5px ;
+   
+}
+.box_cat img:hover{
+   
+    box-shadow: 20px 20px 20px gray;
+}
+
+.footer-left,
+.footer-right {
+    text-align: center;
+}
+
+.footer-right a {
+    margin: 0 10px;
+}

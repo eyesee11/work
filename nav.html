@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floating Navbar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body{
+        background-color: black;
+    }
+
+    .navbar {
+  overflow: hidden;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 20px; /* Add left margin */
+  right: 20px; /* Add right margin */
+  padding: 10px; /* Add top and bottom margin */
+  border-radius: 8px; /* Add rounded corners */
+  z-index: -1; /* Make sure the navbar stays on top */
+  
+}
+img{
+  z-index: 10;
+  width:70px;
+  height:70px;
+  
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: black; /* Adjust link color as needed */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #ddd; /* Add hover effect */
+}
+
+main {
+  padding-top: 80px; /* Height of the navbar + margin */
+}
+section{
+    height:1000px;
+}
+    /* .navbar {
+  overflow: hidden;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10; /* Make sure the navbar stays on top */
+
+
+
+</style>
+<body>
+  <header class="navbar">
+    <div class="i"><img src="logo1.jpeg" alt=""></div>
+    <div class="n">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a></div>
+    
+
+  </header>
+
+  <section></section>
+
+  <script src="script.js"></script>
+</body>
+</html>
