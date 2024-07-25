@@ -435,3 +435,54 @@ hr {
       }
     
     }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      overflow: hidden;
+      background-color: white;
+      position: fixed;
+      top: 10px;
+      left: 20px;
+      right: 20px;
+      padding: 10px;
+      border-radius: 8px;
+      z-index: 10;
+  }
+  
+  .navbar nav {
+      display: flex;
+      justify-content: center;
+      flex: 1;
+  }
+  
+  .navbar img {
+      width: 70px;
+      height: 70px;
+  }
+  
+  .navbar a {
+      float: left;
+      display: block;
+      color: #207567;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+  }
+  
+  .navbar a:hover {
+      background-color: #ddd;
+  }
+  .profile-icon {
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      color: #207567; /* Change the color to ensure visibility */
+      text-decoration: none;
+      padding: 14px 16px;
+  }
+  
+  .profile-icon:hover {
+      background-color: #ddd;
+  }

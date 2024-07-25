@@ -10,7 +10,7 @@
 :root {
   // colors
   @include defineColorHSL(--cd-color-1, 213, 7%, 33%);   // Blue Dark
-  
+  @include defineColorHSL(--cd-color-2, 73, 46%, 55%);   // Green
   @include defineColorHSL(--cd-color-3, 210, 14%, 49%);  // Blue Light
   @include defineColorHSL(--cd-color-4, 0, 0%, 100%);    // White
 
@@ -63,7 +63,7 @@
   height: 50px;
   line-height: 50px;
   padding: 0 var(--space-lg) 0 calc(var(--space-sm)*1.4);
-  color:rgba(255, 255, 255, 0.2);
+  color: var(--cd-color-4);
   background-color: var(--cd-color-1);
   @include fontSmooth;
   --border-color: hsl(var(--cd-color-1-h), var(--cd-color-1-s), calc(var(--cd-color-1-l)*1.1));
@@ -225,7 +225,7 @@ html:not(.js) .cd-faq__group,
   display: block;
   position: relative;
   margin: var(--space-md) 0 var(--space-xs);
-  color:#4E9C81 ;
+  color: var(--cd-color-2);
 
   @include breakpoint(md) {
     font-weight: 300;
@@ -386,7 +386,4 @@ body {
 .cd-article-link {
   color: lightness(var(--cd-color-2), 0.5);
   font-size: var(--text-sm);
-}
-.cd-faq js-cd-faq container max-width-md margin-top-lg margin-bottom-lg{
-  background-color:#6BAF92 ;
 }

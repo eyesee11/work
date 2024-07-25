@@ -8,43 +8,78 @@
     <meta name="description" content="SPREEN - Turn Your Spares Into Green">
     <meta name="keywords" content="environment, protection, conservation, nature, donation">
 </head>
+<style>.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  background-color: white;
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  right: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.navbar nav {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.navbar img {
+  width: 70px;
+  height: 70px;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #207567;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+}
+.profile-icon {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  color: #207567; /* Change the color to ensure visibility */
+  text-decoration: none;
+  padding: 14px 16px;
+}
+
+.profile-icon:hover {
+  background-color: #ddd;
+}</style>
 <body class="img">
-    <header class="header" id="navbar">
-        <div class="top-bar">
-            <div class="contact-info">
-                <span>spreen4570@gmail.com</span> | <span>+918923709367</span>
-            </div>
-            <div class="social-media">
-                <a href="#" aria-label="Facebook">Facebook</a>
-                <a href="https://x.com/spreen_original" target="_blank" aria-label="Twitter">Twitter</a>
-                <a href="https://www.instagram.com/hey_grizz_2301/?utm_source=qr&r=nametag" target="_blank" aria-label="Instagram">Instagram</a>
-                <a href="https://www.linkedin.com/in/spreen-original-2401a431a/" target="_blank" aria-label="LinkedIn">LinkedIn</a>
-            </div>
-        </div>
-        <div class="background-container" id="background-container">
-            <div class="overlay-text" id="overlay-text"></div>
-        </div>
-        <script src="script.js"></script>
-        <script src="nav.js"></script>
-        <nav class="navbar">
-            <div class="brand">
-                <h1>SPREEN</h1>
-            </div>
-            <div class="nav-links">
-                <a href="index.html" class="nav-link active">Home</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="services.html" class="nav-link">Services</a>
-                <a href="causes.html" class="nav-link">Causes</a>
-                <a href="events.html" class="nav-link">Events</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-                <a href="donate.html" class="nav-link donate">Donate Now</a>
-            </div>
-        </nav>
-    </header>
+  <header class="navbar">
+    <img src="images/logo1.jpeg" alt="Logo">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="collabs.html">Collaborators</a>
+        <a href="ngo.html">Volunteer</a>
+        <a href="About.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        
+    </nav>
+    <a href="#" class="profile-icon">
+        <i class="fas fa-user"></i>
+    </a>
+</header>
 
     <section id="home">
+         <h1 class="spreen" style=" font-size: 60px; text-align: center; color: white;">SPREEN</h1>
         <h1>Protect Environment</h1>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <p>TURN YOUR SPARES INTO GREEN.</p>
         <button onclick="window.location.href='about.html'">Join With Us</button>
     </section>
     <section id="benefits">

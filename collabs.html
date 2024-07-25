@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="collabs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/kTcAXBy/WWQ1tWh9lOC5P7nG+fb4VPQpAsbLfUBsv5ycXNuLTlf0bg7I5gIz5viK5VfS+e6ztJ4KQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <header class="navbar">
+        <img src="images/logo1.jpeg" alt="Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="collabs.html">Collaborators</a>
+            <a href="ngo.html">Volunteer</a>
+            <a href="About.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="leaderboard.html">Leaderboard</a>
+            
+        </nav>
+        <a href="#" class="profile-icon">
+            <i class="fas fa-user"></i>
+        </a>
+    </header>
+    <div class="sec1">
+        <img src="https://image.slidesdocs.com/responsive-images/background/aesthetic-landscape-trees-flowers-white-clouds-and-green-grass-powerpoint-background_18122255a0__960_540.jpg" alt="">
+       
+    </div>
+    <div class="options">
+        <button onclick="showImages('nurseries')">Nurseries</button>
+        <button onclick="showImages('general-stores')">General Stores</button>
+        <button onclick="showImages('brands')">Brands</button>
+    </div>
+
+    <div class="grid" id="imageGrid">
+        <!-- Images will be inserted here -->
+    </div>
+<footer class="footer-distributed">
+
+    <div class="footer-left">
+      <h3>Company<span>logo</span></h3>
+      <p class="footer-links">
+        <a href="index.html" class="link-1">Home</a>
+        <a href="collabs.html">Collaborators</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">Faq</a>
+        <a href="contact.html">Contact</a>
+      </p>
+      <p class="footer-company-name">SPREEN © 2024</p>
+    </div>
+
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span>Chitkara University</span> Rajpura, Punjab</p>
+      </div>
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+91-8570893065</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:support@company.com">spreen4570@gmail.com</a></p>
+      </div>
+    </div>
+
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>About the company</span>
+       Made  with the ambition to do good for the environment while trying to increase efforts from each individual's end.
+      </p>
+      <div class="footer-icons">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-github"></i></a>
+      </div>
+    </div>
+  </footer>
+<hr>
+<script>
+    const images = {
+        nurseries: [
+            { src: 'https://plus.unsplash.com/premium_photo-1679765929074-a05be727f0fb?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cGxhbnQlMjBudXJzZXJ5fGVufDB8fDB8fHww', name: 'Rohit Nursery', place: 'Ambala City' },
+            { src: 'https://i.pinimg.com/736x/2e/48/dd/2e48dd1f43d577a6cad0f258de137d5c.jpg', name: 'Green Life Nursery', place: 'Rajpura' },
+            { src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVlZVG2HV1hDEO6LoBq--jzx1V3QVuTHp-yA&s', name: 'Plant Kingdom', place: 'Chandigarh' }
+        ],
+        'general-stores': [
+            { src: 'https://w0.peakpx.com/wallpaper/740/809/HD-wallpaper-general-store-f1-architecture-art-general-store-beautiful-artwork-grocery-painting-wide-screen-store-scenery-landscape.jpg', name: 'Riwayat', place: 'Rajpura' },
+            { src: 'https://cdn.shopify.com/s/files/1/0097/9772/files/Screenshot_2019-03-16_at_13.20.36_1024x1024.png?v=1552742456', name: 'General Store 2', place: 'Location 2' },
+            { src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZTfXPC7H9eMv6hEzWrbi_-KE0beVMPXcw8g&s', name: 'General Store 3', place: 'Location 3' }
+        ],
+        brands: [
+            { src: 'brand1.jpg', name: 'Brand 1', place: 'Location 1' },
+            { src: 'brand2.jpg', name: 'Brand 2', place: 'Location 2' },
+            { src: 'brand3.jpg', name: 'Brand 3', place: 'Location 3' }
+        ]
+    };
+
+    function showImages(category) {
+        const imageGrid = document.getElementById('imageGrid');
+        imageGrid.innerHTML = ''; // Clear the grid
+        images[category].forEach(item => {
+            const flipCard = document.createElement('div');
+            flipCard.classList.add('flip-card');
+            flipCard.innerHTML = `
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="${item.src}" alt="${item.name}" style="width:100%;height:100%;">
+                        <div class="flip-card-text">
+                            <h3>${item.name}</h3>
+                            <p>${item.place}</p>
+                        </div>
+                    </div>
+                    <div class="flip-card-back" style="maxwidth:auto; font-weight:900; line-height:40px;">
+                        <p>${item.name}<br>
+<i>Bronze Badge</i>: Get 5% off on a 1000 rupees purchase.<br>
+<i>Silver Badge</i>: Get 10% off on a 1500 purchase.<br>
+<i>Gold Badge</i>: Get 20% off on a 2000 purchase.</p>
+                    </div>
+                </div>
+            `;
+            imageGrid.appendChild(flipCard);
+        });
+    }
+
+    // Show nurseries by default
+    showImages('nurseries');
+</script>
+</body>
+</html>

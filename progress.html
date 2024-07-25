@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPREEN Membership</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .header img {
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .header h1 {
+            font-size: 20px;
+            margin: 0;
+            color: #6BAF92;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top:120px;
+        }
+
+        .profile-card {
+            background-color:#6BAF92 ;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .profile-card .profile {
+            position: relative;
+            display: inline-block;
+            margin: 20px 0;
+        }
+
+        .profile-card .profile img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid #358873;
+            object-fit: cover; /* Ensure the image covers the circular area */
+        }
+
+        .profile-card .profile .crown-icon {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: #fff;
+            border-radius: 50%;
+            padding: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-card h2 {
+            margin: 0;
+            color: #333;
+        }
+
+        .membership-info {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .membership-info .progress-bar {
+            position: relative;
+            height: 10px;
+            background-color:#6BAF92 ;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .membership-info .progress-bar div {
+            height: 100%;
+            background-color: #358873;
+            width: 25%;
+            border-radius: 5px;
+        }
+
+        .membership-status {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .membership-status div {
+            text-align: center;
+            flex: 1;
+        }
+
+        .membership-status div span {
+            display: block;
+            margin: 5px 0;
+        }
+
+        .membership-status div img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .points {
+            margin-top: 10px;
+        }
+
+        .points p {
+            margin: 0;
+        }
+
+        .points a {
+            color: #ee5678;
+            text-decoration: none;
+        }
+        .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    background-color: white;
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 10;
+}
+
+.navbar nav {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.navbar img {
+    width: 70px;
+    height: 70px;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #207567;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+}
+.profile-icon {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: #207567; /* Change the color to ensure visibility */
+    text-decoration: none;
+    padding: 14px 16px;
+}
+
+.profile-icon:hover {
+    background-color: #ddd;
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+    * {
+      font-family: Open Sans;
+    }
+    
+    footer{
+        margin-top: 60px;
+    }
+    
+    .footer-distributed{
+      background: #666;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+      box-sizing: border-box;
+      width: 100%;
+      text-align: left;
+      font: bold 16px sans-serif;
+      padding: 55px 50px;
+    }
+    
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right{
+      display: inline-block;
+      vertical-align: top;
+    }
+    
+    /* Footer left */
+    
+    .footer-distributed .footer-left{
+      width: 40%;
+    }
+    
+    /* The company logo */
+    
+    .footer-distributed h3{
+      color:  #ffffff;
+      font: normal 36px 'Open Sans', cursive;
+      margin: 0;
+    }
+    
+    .footer-distributed h3 span{
+      color:  lightseagreen;
+    }
+    
+    /* Footer links */
+    
+    .footer-distributed .footer-links{
+      color:  #ffffff;
+      margin: 20px 0 12px;
+      padding: 0;
+    }
+    
+    .footer-distributed .footer-links a{
+      display:inline-block;
+      line-height: 1.8;
+      font-weight:400;
+      text-decoration: none;
+      color:  inherit;
+    }
+    
+    .footer-distributed .footer-company-name{
+      color:  #222;
+      font-size: 14px;
+      font-weight: normal;
+      margin: 0;
+    }
+    
+    /* Footer Center */
+    
+    .footer-distributed .footer-center{
+      width: 35%;
+    }
+    
+    .footer-distributed .footer-center i{
+      background-color:  #33383b;
+      color: #ffffff;
+      font-size: 25px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 42px;
+      margin: 10px 15px;
+      vertical-align: middle;
+    }
+    
+    .footer-distributed .footer-center i.fa-envelope{
+      font-size: 17px;
+      line-height: 38px;
+    }
+    
+    .footer-distributed .footer-center p{
+      display: inline-block;
+      color: #ffffff;
+      font-weight:400;
+      vertical-align: middle;
+      margin:0;
+    }
+    
+    .footer-distributed .footer-center p span{
+      display:block;
+      font-weight: normal;
+      font-size:14px;
+      line-height:2;
+    }
+    
+    .footer-distributed .footer-center p a{
+      color:  lightseagreen;
+      text-decoration: none;;
+    }
+    
+    .footer-distributed .footer-links a:before {
+      content: "|";
+      font-weight:300;
+      font-size: 20px;
+      left: 0;
+      color: #fff;
+      display: inline-block;
+      padding-right: 5px;
+    }
+    
+    .footer-distributed .footer-links .link-1:before {
+      content: none;
+    }
+    
+    /* Footer Right */
+    
+    .footer-distributed .footer-right{
+      width: 20%;
+    }
+    
+    .footer-distributed .footer-company-about{
+      line-height: 20px;
+      color:  #92999f;
+      font-size: 13px;
+      font-weight: normal;
+      margin: 0;
+    }
+    
+    .footer-distributed .footer-company-about span{
+      display: block;
+      color:  #ffffff;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    
+    .footer-distributed .footer-icons{
+      margin-top: 25px;
+    }
+    
+    .footer-distributed .footer-icons a{
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      background-color:  #33383b;
+      border-radius: 2px;
+    
+      font-size: 20px;
+      color: #ffffff;
+      text-align: center;
+      line-height: 35px;
+    
+      margin-right: 3px;
+      margin-bottom: 5px;
+    }
+    
+    /* If you don't want the footer to be responsive, remove these media queries */
+    
+    @media (max-width: 880px) {
+    
+      .footer-distributed{
+        font: bold 14px sans-serif;
+      }
+    
+      .footer-distributed .footer-left,
+      .footer-distributed .footer-center,
+      .footer-distributed .footer-right{
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+    
+      .footer-distributed .footer-center i{
+        margin-left: 0;
+      }
+    
+    }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <img src="images/logo1.jpeg" alt="Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="collabs.html">Collaborators</a>
+            <a href="ngo.html">Volunteer</a>
+            <a href="About.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="leaderboard.html">Leaderboard</a>
+            
+        </nav>
+        <a href="profile.html" class="profile-icon">
+            <i class="fas fa-user"></i>
+        </a>
+    </header>
+    <div class="container">
+        <div class="profile-card">
+            <div class="profile">
+                <img src="https://via.placeholder.com/100" alt="Profile Picture">
+                <div class="crown-icon">
+                    <img src="https://via.placeholder.com/20x20?text=👑" alt="Crown Icon">
+                </div>
+            </div>
+            <h3>SPREEN MEMBER SINCE JAN 2024</h3>
+            <div class="membership-info">
+                <div class="progress-bar">
+                    <div></div>
+                </div>
+                <div class="membership-status">
+                    
+                    <div>
+                        <span><img src="images/bronze.jpeg" alt="Bronze Badge"></span>
+                        <span>Credits:500</span>
+                       
+                    </div>
+                    <div>
+                        <span><img src="images/silver.jpeg" alt="Silver Badge"></span>
+                        <span>Credits:1000</span>
+                       
+                    </div>
+                    <div>
+                        <span><img src="images/gold.jpeg" alt="Gold Badge"></span>
+                        <span>Credits:1500</span>
+                    
+                    </div>
+                </div>
+                <div class="points">
+                    <p>Total Credits:512</p>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Repeat the profile-card div for more profiles -->
+        <div class="profile-card">
+            <div class="profile">
+                <img src="https://via.placeholder.com/100" alt="Profile Picture">
+                <div class="crown-icon">
+                    <img src="https://via.placeholder.com/20x20?text=👑" alt="Crown Icon">
+                </div>
+            </div>
+            <h3>SPREEN MEMBER SINCE JAN 2024</h3>
+            <div class="membership-info">
+                <div class="progress-bar">
+                    <div style="width: 50%;"></div>
+                </div>
+                <div class="membership-status">
+                    
+                    <div>
+                        <span><img src="images/bronze.jpeg" alt="Bronze Badge"></span>
+                        <span>Credits:500</span>
+                        
+                    </div>
+                    <div>
+                        <span><img src="images/silver.jpeg" alt="Silver Badge"></span>
+                        <span>Credits:1000</span>
+                        
+                    </div>
+                    <div>
+                        <span><img src="images/gold.jpeg" alt="Gold Badge"></span>
+                        <span>Credits:1500</span>
+                        
+                    </div>
+                </div>
+                <div class="points">
+                    <p>Total Credits:1050</p>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+          <h3>Company<span>logo</span></h3>
+          <p class="footer-links">
+            <a href="index.html" class="link-1">Home</a>
+            <a href="collabs.html">Collaborators</a>
+            <a href="leaderboard.html">Leaderboard</a>
+            <a href="about.html">About</a>
+            <a href="faq.html">Faq</a>
+            <a href="contact.html">Contact</a>
+          </p>
+          <p class="footer-company-name">SPREEN © 2024</p>
+        </div>
+    
+        <div class="footer-center">
+          <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>Chitkara University</span> Rajpura, Punjab</p>
+          </div>
+          <div>
+            <i class="fa fa-phone"></i>
+            <p>+91-8570893065</p>
+          </div>
+          <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:support@company.com">spreen4570@gmail.com</a></p>
+          </div>
+        </div>
+    
+        <div class="footer-right">
+          <p class="footer-company-about">
+            <span>About the company</span>
+           Made  with the ambition to do good for the environment while trying to increase efforts from each individual's end.
+          </p>
+          <div class="footer-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+          </div>
+        </div>
+      </footer>
+    <hr>
+</body>
+</html>
